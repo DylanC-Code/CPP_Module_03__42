@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 21:24:13 by dcastor           #+#    #+#             */
-/*   Updated: 2025/07/17 22:14:19 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/07/17 22:20:47 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,14 @@ public:
     void beRepaired(unsigned int amount);
 
 protected:
+    std::string &getName();
+
     void setHitPoints(unsigned int hitPoints);
     unsigned int getHitPoints();
 
     void setEnergyPoints(unsigned int energyPoints);
     unsigned int getEnergyPoints();
-    
+
     void setAttackDamage(unsigned int attackDamage);
     unsigned int getAttackDamage();
 };

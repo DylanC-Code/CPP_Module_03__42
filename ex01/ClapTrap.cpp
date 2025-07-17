@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 21:23:50 by dcastor           #+#    #+#             */
-/*   Updated: 2025/07/17 22:17:37 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/07/17 22:20:48 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,10 @@ void ClapTrap::beRepaired(unsigned int amount)
     std::cout << "ClapTrap " << _name
               << " repairs itself, recovering " << amount << " hit points !" << std::endl;
 };
+std::string &ClapTrap::getName()
+{
+    return _name;
+}
 void ClapTrap::setHitPoints(unsigned int hitPoints)
 {
     _hitPoints = hitPoints;
