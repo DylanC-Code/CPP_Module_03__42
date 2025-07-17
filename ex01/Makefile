@@ -6,7 +6,7 @@
 #    By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/09 14:36:04 by dcastor           #+#    #+#              #
-#    Updated: 2025/07/17 21:23:28 by dcastor          ###   ########.fr        #
+#    Updated: 2025/07/17 22:26:30 by dcastor          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,8 @@ RM := rm -rf
 
 # 📁 Sources & Objets
 SRCS := main.cpp \
-		ClapTrap.cpp
+		ClapTrap.cpp \
+		ScavTrap.cpp
 OBJS := $(SRCS:.cpp=.o)
 
 
