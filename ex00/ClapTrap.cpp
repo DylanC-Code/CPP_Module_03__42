@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 21:23:50 by dcastor           #+#    #+#             */
-/*   Updated: 2025/07/17 21:47:11 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/07/17 21:51:49 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void ClapTrap::attack(const std::string &target)
     if (_hitPoints == 0)
     {
         std::cout
-            << "⚠️ ClapTrap " << _name << " is out of order and cannot attack!" << std::endl;
+            << "⚠️  ClapTrap " << _name << " is out of order and cannot attack!" << std::endl;
         return;
     }
     if (_energyPoints == 0)
