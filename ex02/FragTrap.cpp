@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/18 10:19:32 by dcastor           #+#    #+#             */
-/*   Updated: 2025/07/18 10:24:03 by dcastor          ###   ########.fr       */
+/*   Created: 2025/07/18 10:22:07 by dcastor           #+#    #+#             */
+/*   Updated: 2025/07/18 10:25:55 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __FRAGTRAP_H__
-#define __FRAGTRAP_H__
-
 #include "ClapTrap.hpp"
+#include "FragTrap.hpp"
+#include <iostream>
 
-class FragTrap : public ClapTrap
+FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
-public:
-    FragTrap(std::string name);
-    ~FragTrap();
+    std::cout << "FragTrap Constructor called" << std::endl;
+    setHitPoints(100);
+    setEnergyPoints(100);
+    setAttackDamage(30);
+}
 
-    void highFivesGuys(void);
-};
+FragTrap::~FragTrap()
+{
+    std::cout << "FragTrap Deconstructor called" << std::endl;
+}
 
-#endif
+void FragTrap::highFivesGuys(void)
+{
+    std::cout << "High-Fives GUYS !!!!!!!!!! 🙏" << std::endl;
+}
