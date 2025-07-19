@@ -6,7 +6,7 @@
 #    By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/09 14:36:04 by dcastor           #+#    #+#              #
-#    Updated: 2025/07/18 10:30:13 by dcastor          ###   ########.fr        #
+#    Updated: 2025/07/19 09:36:14 by dcastor          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ NAME = test.out
 
 # 📦 Compiler & Flags
 CXX := c++
-CXXFLAGS := -Wall -Wextra -Werror -g3 -std=c++98
+CXXFLAGS := -Wall -Wextra -Werror -Wshadow -g3 -std=c++98
 
 # 🛠 Utilitaires
 MAKE := make
@@ -28,7 +28,8 @@ RM := rm -rf
 SRCS := main.cpp \
 		ClapTrap.cpp \
 		ScavTrap.cpp \
-		FragTrap.cpp
+		FragTrap.cpp \
+		DiamondTrap.cpp
 OBJS := $(SRCS:.cpp=.o)
 
 

@@ -6,18 +6,20 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 21:49:19 by dcastor           #+#    #+#             */
-/*   Updated: 2025/07/18 10:28:37 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/07/19 09:58:53 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main(void)
 {
-    FragTrap dd("DD");
+    DiamondTrap dd("DD");
 
     dd.attack("TOTO");
     dd.highFivesGuys();
+    dd.guardGate();
+    dd.whoAmI();
     dd.takeDamage(3);
     dd.beRepaired(2);
     dd.takeDamage(20);
