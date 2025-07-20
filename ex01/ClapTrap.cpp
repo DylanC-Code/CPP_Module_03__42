@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 21:23:50 by dcastor           #+#    #+#             */
-/*   Updated: 2025/07/17 22:20:48 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/07/20 10:03:41 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,27 @@ ClapTrap::ClapTrap(const std::string name) : _name(name), _hitPoints(10),
 {
     std::cout << "ClapTrap Constructor called" << std::endl;
 }
+
+ClapTrap::ClapTrap(const ClapTrap &other)
+{
+    *this = other;
+}
+
 ClapTrap::~ClapTrap()
 {
     std::cout << "ClapTrap Deconstructor called" << std::endl;
+}
+
+ClapTrap &ClapTrap::operator=(const ClapTrap &other)
+{
+    if (this != &other)
+    {
+        _name = other._name;
+        _hitPoints = other._hitPoints;
+        _energyPoints = other._energyPoints;
+        _attackDamage = other._attackDamage;
+    }
+    return *this;
 }
 
 void ClapTrap::attack(const std::string &target)
@@ -75,9 +93,10 @@ void ClapTrap::beRepaired(unsigned int amount)
     std::cout << "ClapTrap " << _name
               << " repairs itself, recovering " << amount << " hit points !" << std::endl;
 };
-std::string &ClapTrap::getName()
+
+const std::string &ClapTrap::getName() const
 {
-    return _name;
+    return this->_name;
 }
 void ClapTrap::setHitPoints(unsigned int hitPoints)
 {

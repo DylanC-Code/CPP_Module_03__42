@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 22:02:12 by dcastor           #+#    #+#             */
-/*   Updated: 2025/07/17 22:25:10 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/07/20 10:03:14 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,18 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
     setHitPoints(100);
     setEnergyPoints(50);
     setAttackDamage(20);
+}
+
+ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other.getName())
+{
+    *this = other;
+}
+
+ScavTrap &ScavTrap::operator=(const ScavTrap &other)
+{
+    if (this != &other)
+        ClapTrap::operator=(other);
+    return *this;
 }
 
 ScavTrap::~ScavTrap()
