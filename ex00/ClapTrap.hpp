@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 21:24:13 by dcastor           #+#    #+#             */
-/*   Updated: 2025/07/17 21:33:50 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/07/20 09:51:09 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,9 @@ private:
 
 public:
     ClapTrap(const std::string name);
+    ClapTrap(const ClapTrap &other);
     ~ClapTrap();
+    ClapTrap &operator=(const ClapTrap &other);
 
     void attack(const std::string &target);
     void takeDamage(unsigned int amount);
