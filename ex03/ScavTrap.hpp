@@ -6,7 +6,7 @@
 /*   By: dcastor <dcastor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 21:59:07 by dcastor           #+#    #+#             */
-/*   Updated: 2025/07/19 09:55:26 by dcastor          ###   ########.fr       */
+/*   Updated: 2025/07/20 10:16:08 by dcastor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,13 @@
 class ScavTrap : virtual public ClapTrap
 {
 public:
-    ScavTrap(std::string name);
-    ~ScavTrap();
+	ScavTrap(std::string name);
+	ScavTrap(const ScavTrap &other);
+	~ScavTrap();
+	ScavTrap &operator=(const ScavTrap &other);
 
-    void guardGate();
-    void attack(const std::string &target);
+	void guardGate();
+	void attack(const std::string &target);
 };
 
 #endif
